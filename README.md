@@ -19,3 +19,11 @@ and exposes decision-ready cloud-cost metrics in Power BI.
 - Engineering managers
 - Finance business partners
 - Technology leadership
+
+## MVP analytical questions
+
+1. What is the total cloud cost by month?
+2. Which teams, projects and services generate the highest costs?
+3. How does actual monthly cost compare with the previous month?
+4. Which cost categories show unusually large increases?
+5. What proportion of spending can be allocated to a team or project?
