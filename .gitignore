@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Environment variables and credentials
+.env
+*.env
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Raw or sensitive cloud billing data
+data/raw/
+data/private/
+
+# Databricks local files
+.databricks/
+
+# dbt generated files
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+
+# Power BI temporary files
+*.pbit.tmp
