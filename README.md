@@ -27,3 +27,16 @@ and exposes decision-ready cloud-cost metrics in Power BI.
 3. How does actual monthly cost compare with the previous month?
 4. Which cost categories show unusually large increases?
 5. What proportion of spending can be allocated to a team or project?
+
+## Current status
+
+- Business problem defined
+- MVP analytical questions defined
+- Initial data contract created
+- Repository structure created
+- Bronze ingestion notebook initialized
+
+## Next session
+
+Obtain or generate the sample cloud billing dataset, load it into Databricks,
+add ingestion metadata and write the first Bronze Delta table.
