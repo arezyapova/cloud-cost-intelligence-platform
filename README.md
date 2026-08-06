@@ -17,7 +17,7 @@ and exposes decision-ready cloud-cost metrics in Power BI.
 
 - FinOps analysts
 - Engineering managers
-- Finance business partners
+- Finance business partners, CFO
 - Technology leadership
 
 ## MVP analytical questions
