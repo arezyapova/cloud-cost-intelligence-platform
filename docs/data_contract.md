@@ -21,3 +21,29 @@
 - `billing_date`, `service_name` and `cost_amount` are mandatory.
 - Missing `team` or `project` values will be classified as `Unallocated`
   rather than deleted.
+
+## Sample dataset
+
+The project currently uses reproducible synthetic
+multi-cloud billing data.
+
+Period: January–June 2026
+
+Approximate volume: 2,500 billing records
+
+Cloud providers:
+- AWS
+- Azure
+- GCP
+
+Currency: EUR
+
+The raw dataset intentionally contains several
+data-quality issues:
+
+- missing team allocations
+- missing project allocations
+- inconsistent environment labels
+- duplicate records
+
+These issues will be handled in the Silver layer.
