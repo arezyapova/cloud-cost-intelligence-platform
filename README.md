@@ -40,3 +40,14 @@ and exposes decision-ready cloud-cost metrics in Power BI.
 
 Obtain or generate the sample cloud billing dataset, load it into Databricks,
 add ingestion metadata and write the first Bronze Delta table.
+
+## Pipeline status
+
+✅ Synthetic cloud cost generation  
+✅ Raw CSV ingestion  
+✅ Explicit Spark schema  
+✅ Bronze ingestion metadata  
+✅ Basic data-quality validation  
+✅ Bronze Delta table  
+
+Next: Silver cleaning and standardization.
