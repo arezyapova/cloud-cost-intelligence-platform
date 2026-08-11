@@ -44,10 +44,11 @@ add ingestion metadata and write the first Bronze Delta table.
 ## Pipeline status
 
 ✅ Synthetic cloud cost generation  
-✅ Bronze ingestion  
+✅ Bronze ingestion and metadata  
 ✅ Silver cleaning and standardization  
-✅ Missing allocation handling  
-✅ Duplicate removal  
-⬜ Gold analytical model  
+✅ Duplicate and allocation handling  
+✅ Gold monthly cost model  
+✅ Silver-to-Gold cost reconciliation  
+⬜ Data quality framework  
 ⬜ dbt models and tests  
 ⬜ Power BI dashboard
