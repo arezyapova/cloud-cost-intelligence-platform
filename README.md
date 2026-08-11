@@ -44,10 +44,10 @@ add ingestion metadata and write the first Bronze Delta table.
 ## Pipeline status
 
 ✅ Synthetic cloud cost generation  
-✅ Raw CSV ingestion  
-✅ Explicit Spark schema  
-✅ Bronze ingestion metadata  
-✅ Basic data-quality validation  
-✅ Bronze Delta table  
-
-Next: Silver cleaning and standardization.
+✅ Bronze ingestion  
+✅ Silver cleaning and standardization  
+✅ Missing allocation handling  
+✅ Duplicate removal  
+⬜ Gold analytical model  
+⬜ dbt models and tests  
+⬜ Power BI dashboard
