@@ -28,18 +28,16 @@ and exposes decision-ready cloud-cost metrics in Power BI.
 4. Which cost categories show unusually large increases?
 5. What proportion of spending can be allocated to a team or project?
 
-## Current status
+### Data quality
 
-- Business problem defined
-- MVP analytical questions defined
-- Initial data contract created
-- Repository structure created
-- Bronze ingestion notebook initialized
+The pipeline currently validates:
 
-## Next session
-
-Obtain or generate the sample cloud billing dataset, load it into Databricks,
-add ingestion metadata and write the first Bronze Delta table.
+- required field completeness
+- duplicate removal
+- categorical standardization
+- allocation completeness
+- Bronze/Silver row-count changes
+- Silver-to-Gold cost reconciliation
 
 ## Pipeline status
 
@@ -49,6 +47,7 @@ add ingestion metadata and write the first Bronze Delta table.
 ✅ Duplicate and allocation handling  
 ✅ Gold monthly cost model  
 ✅ Silver-to-Gold cost reconciliation  
-⬜ Data quality framework  
+✅ Data quality framework  
 ⬜ dbt models and tests  
 ⬜ Power BI dashboard
+
