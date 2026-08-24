@@ -42,42 +42,44 @@ and exposes decision-ready cloud-cost metrics in Power BI.
 
 ## Architecture
 
+```text
 Synthetic AWS / Azure / GCP billing data
-                    ↓
-              Python generator
-                    ↓
-          Databricks + Delta Lake
-                    ↓
-                 Bronze
-          raw records + metadata
-                    ↓
-                 Silver
-     cleaning + standardization + dedupe
-                    ↓
-                   dbt
-          source → staging → tests
-                    ↓
-       fct_monthly_cloud_costs
-              Gold mart
-                    ↓
-                Power BI
+                ↓
+          Python generator
+                ↓
+      Databricks + Delta Lake
+                ↓
+             Bronze
+      raw records + metadata
+                ↓
+             Silver
+ cleaning + standardization + dedupe
+                ↓
+              dbt
+     source → staging → tests
+                ↓
+   fct_monthly_cloud_costs
+            Gold mart
+                ↓
+            Power BI
+```
 
-## Layer Responsibilities
+## Layer responsibilities
 
-Python
-Synthetic multi-cloud billing generation
+**Python**  
+Synthetic multi-cloud billing generation.
 
-Databricks / PySpark
-Data ingestion, Bronze and Silver transformations
+**Databricks / PySpark**  
+Data ingestion, Bronze and Silver transformations.
 
-Delta Lake / Unity Catalog
-Storage and governed data objects
+**Delta Lake / Unity Catalog**  
+Storage and governed data objects.
 
-dbt
-Analytics modeling, testing, lineage and documentation
+**dbt**  
+Analytics modeling, testing, lineage and documentation.
 
-Power BI
-FinOps reporting and consumption layer
+**Power BI**  
+FinOps reporting and consumption layer.
 
 ## Data Quality
 
@@ -122,18 +124,19 @@ reporting.
 An earlier PySpark Gold implementation is retained as a validation benchmark
 and is reconciled against the dbt model to confirm consistency of total costs.
 
+
 ## Pipeline status
 
-✅ Synthetic cloud cost generation
-✅ Bronze ingestion and metadata
-✅ Silver cleaning and standardization
-✅ Duplicate and allocation handling
-✅ dbt staging model
-✅ dbt data quality tests
-✅ Gold monthly cost mart
-✅ Silver-to-Gold cost reconciliation
-✅ dbt documentation and lineage metadata
-⬜ Power BI dashboard
+- ✅ Synthetic cloud cost generation
+- ✅ Bronze ingestion and metadata
+- ✅ Silver cleaning and standardization
+- ✅ Duplicate and allocation handling
+- ✅ dbt staging model
+- ✅ dbt data quality tests
+- ✅ Gold monthly cost mart
+- ✅ Silver-to-Gold cost reconciliation
+- ✅ dbt documentation and lineage metadata
+- ⬜ Power BI dashboard
 
 ## Planned Power BI dashboard
 
@@ -154,8 +157,8 @@ Planned views include:
 
 ## Repository structure
 
+```text
 cloud-cost-intelligence-platform/
-│
 ├── dbt/
 │   └── cloud_cost_intelligence/
 │       ├── models/
@@ -163,23 +166,18 @@ cloud-cost-intelligence-platform/
 │       │   │   ├── sources.yml
 │       │   │   ├── stg_cloud_costs.sql
 │       │   │   └── stg_cloud_costs.yml
-│       │   │
 │       │   └── marts/
 │       │       ├── fct_monthly_cloud_costs.sql
 │       │       └── fct_monthly_cloud_costs.yml
-│       │
 │       └── dbt_project.yml
-│
 ├── docs/
 │   └── data_contract.md
-│
 ├── notebooks/
 │   └── Databricks transformation notebooks
-│
 ├── src/
 │   └── synthetic data generation
-│
 └── README.md
+```
 
 ## Current project scope
 
