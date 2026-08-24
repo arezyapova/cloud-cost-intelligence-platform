@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: fct_monthly_cloud_costs
+    description: >
+      Monthly cloud cost fact model for FinOps analysis
+      and downstream Power BI reporting.
+
+    columns:
+      - name: billing_month
+        data_tests:
+          - not_null
+
+      - name: provider
+        data_tests:
+          - not_null
+
+      - name: total_cost
+        data_tests:
+          - not_null
+
+      - name: allocation_status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - Allocated
+                  - Unallocated

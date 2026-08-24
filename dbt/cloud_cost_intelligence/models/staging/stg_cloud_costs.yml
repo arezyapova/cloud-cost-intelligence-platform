@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: stg_cloud_costs
+    description: >
+      Standardized cloud cost records used by downstream
+      FinOps analytical models.
+
+    columns:
+      - name: billing_date
+        data_tests:
+          - not_null
+
+      - name: provider
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - AWS
+                  - Azure
+                  - GCP
+
+      - name: service_name
+        data_tests:
+          - not_null
+
+      - name: cost_amount
+        data_tests:
+          - not_null
+
+      - name: environment
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - Production
+                  - Development
+                  - Test

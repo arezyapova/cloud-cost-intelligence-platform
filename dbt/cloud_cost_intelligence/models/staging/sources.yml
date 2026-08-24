@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: cloud_cost_intelligence
+    catalog: workspace
+    schema: cloud_cost_intelligence
+
+    tables:
+      - name: silver_cloud_costs
+        description: >
+          Cleaned, standardized and deduplicated cloud cost records
+          produced by the Databricks Silver transformation layer.
