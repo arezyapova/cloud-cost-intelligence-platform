@@ -159,19 +159,3 @@ df_bronze = (
 display(df_bronze.limit(20))
 
 print("Rows:", df_bronze.count())
-
-    F.col("cost_amount").isNull()
-
-duplicates = (
-
-
-)
-
-    .format("delta")
-
-
-    "cloud_cost_intelligence.bronze_cloud_costs"
-
-display(bronze_check.limit(20))
-
-

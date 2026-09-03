@@ -136,24 +136,39 @@ and is reconciled against the dbt model to confirm consistency of total costs.
 - ✅ Gold monthly cost mart
 - ✅ Silver-to-Gold cost reconciliation
 - ✅ dbt documentation and lineage metadata
-- ⬜ Power BI dashboard
+- ✅ Power BI dashboard
 
-## Planned Power BI dashboard
+## Dashboard
 
-The Power BI layer will provide a business-facing view of cloud expenditure,
-with a focus on cost visibility, ownership and trend analysis.
+The Power BI dashboard provides a business-facing view of multi-cloud expenditure
+with a focus on cost visibility, ownership, allocation and month-over-month trends.
 
-Planned views include:
+The dashboard includes:
 
-- total cloud cost
-- month-over-month cost trend
-- cost by cloud provider
-- cost by team
-- cost by project
-- cost by service
-- cost by environment
-- allocated vs unallocated spend
-- filters for provider, team, project and environment
+- Total Cloud Cost
+- Month-over-Month Cost Change %
+- Total Usage
+- Unallocated Cost %
+- Monthly cloud cost trend
+- Cost by cloud provider
+- Cost by team
+- Cost by service
+- Cost by environment
+- Allocated vs unallocated spend
+- Top month-over-month cost increase drivers
+- Interactive filters for month, provider, team, project and environment
+
+### Dashboard preview
+
+![Cloud Cost Intelligence Dashboard](powerbi/cloud_cost_intelligence.png)
+
+## Key insights
+
+- GCP represents the largest share of total simulated cloud spend.
+- Infrastructure is the highest-cost engineering team in the selected period.
+- Database shows the largest month-over-month cost increase.
+- Production workloads account for the majority of total cloud expenditure.
+- 16% of spending remains unallocated to a team or project.
 
 ## Repository structure
 
@@ -176,6 +191,9 @@ cloud-cost-intelligence-platform/
 │   └── Databricks transformation notebooks
 ├── src/
 │   └── synthetic data generation
+├── powerbi/
+│   ├── cloud_cost_project.pbix
+│   └── cloud_cost_intelligence.png
 └── README.md
 ```
 
